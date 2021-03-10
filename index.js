@@ -1,5 +1,8 @@
-const { Server } = require('ws');
-const server = new Server({ server });
+const WebSocket = require('ws');
+const porta = 3000;
+const server = new WebSocket.Server({
+  port: process.env.PORT || porta
+});
 let sockets = [];
 server.on('connection', function (socket) {
   // Adicionamos cada nova conexão/socket ao array `sockets`

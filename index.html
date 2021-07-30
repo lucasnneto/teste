@@ -1,0 +1,11 @@
+<script>
+  var exampleSocket = new WebSocket("ws://localhost:3000");
+  exampleSocket.onmessage = function (event) {
+    console.log(event.data);
+  };
+  exampleSocket.onopen = function (event) {
+    exampleSocket.send(
+      "Aqui vai algum texto que o servidor esteja aguardando urgentemente!"
+    );
+  };
+</script>

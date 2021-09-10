@@ -1,5 +1,8 @@
 var app = require("express")();
+var cors = require("cors");
 var http = require("http").Server(app);
+app.use(cors());
+
 const porta = process.env.PORT || 3000;
 app.get("/", (req, res) => {
   res.send(new Date());

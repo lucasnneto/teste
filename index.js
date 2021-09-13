@@ -13,6 +13,7 @@ app.get("/assinar/:id", (req, res) => {
     companyName: "Empresa Teste",
     companyTaxId: "11111111000101",
     clientName: "Nome Teste",
+    clientTaxId: id.charCodeAt(0) % 2 === 0 ? "43610698080" : "22426977000108",
     term: "Autorizo a Empresa acima, a consulta dos débitos e responsabilidades decorrentes de operações de crédito que constem ou venham a constar em meu nome e de minhas empresas, no Sistema de Informações de Crédito - SCR do Banco Central, através da Nagro Crédito Agro Ltda.",
     termId: id,
     questions: [

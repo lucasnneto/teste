@@ -38,7 +38,7 @@ app.get("/assinar/:id", (req, res) => {
     ],
   });
 });
-app.post("/validar/resposta", (req, res) => {
+app.post("/validar/respostas", (req, res) => {
   const saida = Math.random();
   res.json({ message: saida <= 0.9 ? "Acceppt" : "Refused" });
 });

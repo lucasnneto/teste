@@ -40,7 +40,7 @@ app.get("/assinar/:id", (req, res) => {
 });
 app.post("/validar/respostas", (req, res) => {
   const saida = Math.random();
-  res.json({ message: saida <= 0.9 ? "Acceppt" : "Refused" });
+  res.json({ message: saida <= 0.91 ? "Acceppt" : "Refused" });
 });
 app.post("/validar/signatario", (req, res) => {
   res.json({ message: "Certo" });
